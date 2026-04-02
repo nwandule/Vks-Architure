@@ -59,6 +59,87 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
-# Vks-Architure
-Modern architecture portfolio website built with Angular 20, featuring project showcases, filtering, and admin content management.
+Work in Progress
 
+A modern, responsive architecture portfolio web application built with Angular 20.
+This platform showcases architectural projects, allows filtering by category, and includes a simple admin interface for content management.
+
+This project is currently under active development.
+
+The main goal at this stage is to demonstrate strong frontend engineering skills using Angular, including:
+
+Component-based architecture
+State management using Angular Signals
+Responsive UI design
+Clean, scalable project structure
+
+Features
+
+Public Features
+
+Modern landing page (Hero section)
+Project showcase gallery
+Filter projects by type (Residential, Commercial, etc.)
+Responsive design for all screen sizes
+Contact form (Get in touch)
+
+Hidden login access
+Manage profile information
+Update "About" section
+Add / Edit / Delete projects
+Upload project images
+
+Tech Stack
+
+Frontend: Angular 20
+Language: TypeScript
+State Management: Angular Signals
+Styling: SCSS / CSS
+Architecture: Standalone Components
+Routing: Angular Router
+
+src/ 
+│── app/ 
+│├── core/ # Singleton services, guards 
+│├── shared/ # Reusable components, pipes 
+│├── features/
+ │ │ ├── home/
+ │ │ ├── projects/
+ │ │ ├── about/
+ │ │ ├── contact/
+ │ │ └── admin/
+ │ ├── layout/ # Navbar, footer, layout shell
+ │ ├── app.routes.ts
+ │ └── app.component.ts
+ │ │── assets/
+ │── styles/
+
+
+Angular Modern Practices Used
+
+Standalone Components (No NgModules)
+Angular Signals for state management
+Lazy-loaded feature structure
+Reusable UI components
+Clean and scalable architecture
+
+Installation & Setup
+1. Clone the repository
+git clone https://github.com/your-username/vks-architects.git
+cd vks-architects
+2. Install dependencies
+npm install
+3. Run the application
+ng serve
+4. Open in browser
+http://localhost:4200
+
+Requirements
+Node.js v20 LTS
+Angular CLI v20+
+
+UI/UX Goals
+Clean and modern design
+Fast performance
+Mobile-first responsiveness
+Professional architectural aesthetic
