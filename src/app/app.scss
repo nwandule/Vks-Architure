@@ -1,0 +1,47 @@
+/* ================================
+   🌍 DESIGN TOKENS
+================================ */
+:root {
+  --primary-dark: #1a1a1a;
+  --text-muted: #757575;
+  --accent-gold: #c5a059;
+
+  --nav-font-size: 0.8rem;
+
+  --transition-smooth: all 0.3s ease-in-out;
+
+  --container-max: 1200px;
+  --section-spacing: 4rem;
+}
+
+/* ================================
+   🔄 RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   🧱 BASE STYLES
+================================ */
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-dark);
+  background-color: #ffffff;
+}
+
+/* ================================
+   📦 LAYOUT UTILITIES
+================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* reusable spacing */
+.section {
+  padding: var(--section-spacing) 0;
+}

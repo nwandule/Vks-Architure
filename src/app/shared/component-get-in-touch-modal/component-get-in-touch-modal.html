@@ -1,0 +1,57 @@
+<div class="modal-backdrop" *ngIf="isOpen()">
+  <div class="modal-container">
+    <button class="close-btn" (click)="close()">✕</button>
+    <h2>Get in Touch</h2>
+    <form #contactForm="ngForm" (ngSubmit)="submit(contactForm)">
+      
+      <!-- Name -->
+      <input 
+        type="text" 
+        [(ngModel)]="name" 
+        name="name" 
+        placeholder="Your Name" 
+        required 
+        #nameInput="ngModel" 
+      />
+      <div *ngIf="nameInput.invalid && nameInput.touched" class="error">
+        Name is required
+      </div>
+
+      <!-- Cell Number -->
+      <input 
+        type="tel" 
+        [(ngModel)]="cellNumber" 
+        name="cellNumber" 
+        placeholder="Cell Number" 
+        required 
+        pattern="^[0-9]{10}$"
+        #cellInput="ngModel"
+      />
+      <div *ngIf="cellInput.invalid && cellInput.touched" class="error">
+        Cell number is required and must be 10 digits
+      </div>
+
+      <!-- Message -->
+      <textarea 
+        [(ngModel)]="message" 
+        name="message" 
+        placeholder="Your Message" 
+        rows="5" 
+        required
+        #messageInput="ngModel"
+      ></textarea>
+      <div *ngIf="messageInput.invalid && messageInput.touched" class="error">
+        Message is required
+      </div>
+
+      <!-- Submit -->
+      <button 
+        type="submit" 
+        class="cta-button" 
+        [disabled]="contactForm.invalid"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>

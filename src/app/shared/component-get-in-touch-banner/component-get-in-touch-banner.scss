@@ -1,0 +1,42 @@
+/**
+ * @author @vikash
+ * @file get-in-touch-banner.component.scss
+ * @description
+ * Styles for the Get In Touch banner component.
+ * 
+ */
+
+.get-in-touch {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-dark);
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    background: var(--accent-gold);
+    color:black;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+
+    &:hover {
+      background: var(--primary-dark);
+    }
+  }
+}

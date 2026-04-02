@@ -1,0 +1,126 @@
+/**
+ * @author  @vikash
+ * @component HomeComponent
+ * @description Styles for the landing page, including the premium hero and asymmetric grid.
+ */
+
+/* 1. Hero Section - The "Impact" Area */
+.premium-hero {
+  position: relative; /* Takes up 80% of the screen height */
+  margin-bottom: var(--section-spacing, 4rem);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-v2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* Darkens image so white text pops */
+  z-index: -1;
+}
+
+.hero-text-overlay {
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-text-overlay h2 {
+  font-size: clamp(2rem, 5vw, 4rem); /* Responsive font size */
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.cta-button:hover {
+  background: #ffffff;
+  color: var(--primary-dark);
+}
+
+/* 2. Asymmetric Grid - The "Curated" Look */
+.asymmetric-projects {
+  padding: 4rem 0;
+}
+
+.asymmetric-projects h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+  color: var(--text-muted);
+}
+
+.refined-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12-column grid for flexibility */
+  gap: 2rem;
+}
+
+.proj-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.proj-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.proj-card h3 {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Senior Layout Logic: Spanning columns differently */
+.proj-card.tall {
+  grid-column: span 7;
+  aspect-ratio: 4 / 5;
+}
+
+.proj-card.wide {
+  grid-column: span 5;
+  aspect-ratio: 1 / 1;
+  margin-top: 4rem; /* Offsets the image for that "architectural" feel */
+}
+
+.proj-card:hover img {
+  transform: scale(1.05);
+}
+
+/* 3. Responsive Adjustments */
+@media (max-width: 768px) {
+  .refined-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .proj-card.wide {
+    margin-top: 0;
+  }
+  
+  .premium-hero {
+    height: 60vh;
+  }
+}
+

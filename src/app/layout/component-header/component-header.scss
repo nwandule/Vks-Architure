@@ -1,0 +1,36 @@
+.site-header {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Nav links */
+.nav-link {
+  margin: 0 0.5rem;
+  font-size: var(--nav-font-size);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: var(--transition-smooth);
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Mobile spacing */
+@media (max-width: 991px) {
+  .navbar-nav {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 0.8rem 0;
+  }
+}

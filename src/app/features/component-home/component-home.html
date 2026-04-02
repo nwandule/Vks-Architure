@@ -1,0 +1,44 @@
+<main class="home-content-area container">
+    
+    <section class="premium-hero">
+      <div class="hero-image-v2">
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
+          alt="Modern glass skyscraper architecture" 
+          style="background-color: #1a1a1a;"
+        />
+      </div>
+      <div class="hero-text-overlay">
+        <h2>We build the future, beautifully.</h2>
+        <button class="cta-button" (click)="getInTouch.open()">Get In Touch</button>
+      </div>
+    </section>
+
+    <section class="asymmetric-projects">
+      <h2>Selected Works</h2>
+      <div class="refined-grid">
+        
+        <article class="proj-card tall">
+          <img 
+            src="https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=2067&auto=format&fit=crop" 
+            alt="Vertical residential design" 
+            loading="lazy"
+          />
+          <h3>Project Alpha</h3>
+        </article>
+
+        <article class="proj-card wide">
+  <img 
+    src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
+    alt="Minimalist office interior architecture" 
+    loading="lazy"
+    onerror="this.src='https://via.placeholder.com/1200x800?text=Architecture+Project'"
+  />
+  <h3>Project Beta</h3>
+</article>
+
+      </div>
+    </section>
+    <app-component-get-in-touch-banner></app-component-get-in-touch-banner>
+    <app-component-get-in-touch-modal #getInTouch="getInTouchModal"></app-component-get-in-touch-modal>
+</main>
